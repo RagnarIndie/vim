@@ -49,6 +49,10 @@ set incsearch
 " Highlight things that we find with the search
 set hlsearch
 
+set ic
+
+" Highlight search results
+nnoremap <F3> :set hlsearch!<CR>
 "{{{Look and Feel
 
 " Favorite Color Scheme
@@ -87,8 +91,6 @@ set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-" Highlight search results
-nnoremap <F3> :set hlsearch!<CR>
 
 au BufNewFile,BufRead *.php set filetype=php
 
@@ -103,18 +105,3 @@ let tlist_sql_settings = 'sql;P:package;t:table'
 " Right margin
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn=join(range(121,999),",")
-
-" VCS mappings
-nmap <Leader>sa <Plug>VCSAdd 
-nmap <Leader>sn <Plug>VCSAnnotate 
-nmap <Leader>sc <Plug>VCSCommit 
-nmap <Leader>sd <Plug>VCSDiff 
-nmap <Leader>sg <Plug>VCSGotoOriginal 
-nmap <Leader>sG <Plug>VCSGotoOriginal! 
-nmap <Leader>sl <Plug>VCSLog 
-nmap <Leader>sL <Plug>VCSLock 
-nmap <Leader>sr <Plug>VCSReview 
-nmap <Leader>ss <Plug>VCSStatus
-nmap <Leader>su <Plug>VCSUpdate 
-nmap <Leader>sU <Plug>VCSUnlock 
-nmap <Leader>sv <Plug>VCSVimDiff
